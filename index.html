@@ -42,15 +42,13 @@
 
 <body class="grid">
     <!-- добавьте вёрстку -->
-    <div class="shapka">
         <header class="header">
-            <h2 class="title">Магазин игрушек</h2>
+            <h1 class="title">Магазин игрушек</h1>
         </header>
-    </div>
     <div class="container">   
         <form action="" class="filter">
-            <p>Цвет</p>
-            <div class="flag">
+            <h4 class="filter-title">Цвет</h4>
+            <div class="filter-items">
                 <div class="together">
                     <input type="checkbox">Белый</input>
                 </div>
@@ -65,8 +63,8 @@
                 </div>
             </div>
 
-            <p>Размер</p>
-            <div class="flag">
+            <h4 class="filter-title">Размер</h4>
+            <div class="filter-items">
                 <div class="together">
                     <input type="checkbox">Большой</input>
                 </div>
@@ -79,89 +77,73 @@
             </div>
         </form>
 
-        <div class="mainwords">
+        <div class="content">
             <div class="titleword">
-                <h1>Мягкие игрушки</h1>
-                <p>Все дети любят мягкие игрушки</p>
+                <h2 class="subtitle">Мягкие игрушки</h2>
+                <p class="foreword">Все дети любят мягкие игрушки</p>
             </div>
 
-            <div class="wrap">
-                <div class="elem">
+            <div class="items-row">
+                <div class="item">
                     <a href="">Котики</a>
                     <p class="story">Мяукают и ловят мышей</p>
                 </div>
 
-                <div class="elem">
+                <div class="item">
                     <a href="">Медведи</a>
                     <p class="story">Верные друзья</p>
                 </div>
             </div>
 
-            <div class="titleword">
-                <h2>Популярные</h2>
-            </div>
-
-            <div class="wrap">
-                <div class="elem">
-                    <div class="direkt">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
-                        <div class="but">
-                            <a class="down" href="">Федор</a>
-                            <button>Купить</button>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="elem">
-                    <div class="direkt">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
-                        <div class="but">
-                            <a class="down" href="">Персик</a>
-                            <button>Купить</button>
-                        </div>
+            <h3 class="populars-title">Популярные</h3>
+            <div class="items-row">
+                <div class="item item-with-img">
+                    <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                    <div class="item-description">
+                        <a class="item-link" href="">Федор</a>
+                        <button>Купить</button>
                     </div>
                 </div>
 
-                <div class="elem">
-                    <div class="direkt">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
-                        <div class="but">
-                            <a class="down" href="">Адольф</a>
-                            <button>Купить</button>
-                        </div>
+                <div class="item item-with-img">
+                    <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                    <div class="item-description">
+                        <a class="item-link" href="">Персик</a>
+                        <button>Купить</button>
+                    </div>
+                </div>
+
+                <div class="item item-with-img">
+                    <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                    <div class="item-description">
+                        <a class="item-link" href="">Адольф</a>
+                        <button>Купить</button>
                     </div>
                 </div>
             </div>
 
-            <div class="wrap" style="padding-top: 12px;">
-                <div class="elem">
-                    <div class="direkt">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
-                        <div class="but">
-                            <a class="down" href="">Барсик</a>
-                            <button>Купить</button>
-                        </div>
+            <div class="items-row items-row-bottom">
+                <div class="item item-with-img">
+                    <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                    <div class="item-description">
+                        <a class="item-link" href="">Барсик</a>
+                        <button>Купить</button>
                     </div>
                 </div>
 
-                <div class="elem">
-                    <div class="direkt">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
-                        <div class="but">
-                            <a class="down" href="">Дружок</a>
-                            <button>Купить</button>
-                        </div>
+                <div class="item item-with-img">
+                    <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                    <div class="item-description">
+                        <a class="item-link" href="">Пушок</a>
+                        <button>Купить</button>
                     </div>
                 </div>
 
-                <div class="elem">
-                    <div class="direkt">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
-                        <div class="but">
-                            <a class="down" href="">Пушок</a>
-                            <button>Купить</button>
-                        </div>
+                <div class="item item-with-img">
+                    <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                    <div class="item-description">
+                        <a class="item-link" href="">Дружок</a>
+                        <button>Купить</button>
                     </div>
                 </div>
             </div>
@@ -171,12 +153,14 @@
     </div>
     <style>
         /* добавьте стили */
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
         .grid {
             display: grid;
-            justify-content: center;
-        }
-        .shapka {
-            display: flex;
             justify-content: center;
         }
         .header {
@@ -189,44 +173,65 @@
         }
         .title {
             padding-left: 12px;
+            font-size: 24px;
             color: white;
+        }
+        .subtitle {
+            font-size: 32px;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+        .foreword {
+            margin-top: 0;
         }
         .container {
             min-width: 960px;
             padding-top: 12px;
             display: grid;
-            justify-content: center;
-            display: flex;
+            grid-template-columns: 240px 1fr;
         }
         .filter {
-            padding-left: 12px;
-            width: 228px;
+            padding: 12px;
+            width: 240px;
             background-color: rgb(235, 235, 235);
-            
-
+            box-sizing: border-box;
         }
-        .flag {
+        .filter-title {
+            font-size: 16px;
+            margin-top: 0px;
+            margin: 0;
+        }
+        .filter-items {
+            padding-left: 12px;
             display: flex;
             flex-direction: column;
         }
         .together {
             display: flex;
             flex-direction: row;
-            align-items: center;
-            padding-bottom: 6px;
+            padding-bottom: 3px;
         }
-        .mainwords {
+        .content {
             width: 100%;
             padding-left: 12px;
+            box-sizing: border-box;
         }
         .titleword {
             padding-left: 12px;
         }
-        .wrap {
+        .populars-title {
+            padding-left: 12px;
+            font-size: 24px;
+        }
+        .items-row {
             display: flex;
             flex-direction: row; 
             grid-gap: 12px;
         }
+        .items-row-bottom {
+            margin-top: 12px;
+        }
+
         a {
             color: rgb(48, 165, 228);
         }
@@ -238,23 +243,26 @@
         .story {
             color: rgb(101, 101, 101);
         }
-        .elem {
+        .item {
             width: 100%;
             background-color: rgb(235, 235, 235);
             padding-left: 12px;
-            padding-top: 12px;
-            
+            padding-top: 12px;   
         }
-        .direkt {
+        .item-with-img {
             display: flex;
             flex-direction: row;
         }
-        .but {
+        /* .direkt {
+            display: flex;
+            flex-direction: row;
+        } */
+        .item-description {
             display: flex;
             flex-direction: column;
         }
-        .down {
-            padding-bottom: 17px;
+        .item-link {
+            margin-bottom: 17px;
         }
         button {
             margin-bottom: 12px;
