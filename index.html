@@ -43,9 +43,11 @@
 <body class="grid">
     <!-- добавьте вёрстку -->
     <div class="main">
-        <header class="header">
-            <h1 class="title">Магазин игрушек</h1>
-        </header>
+        <div class="helpheader">
+            <header class="header">
+                <h1 class="title">Магазин игрушек</h1>
+            </header>
+        </div>
         <div class="container">   
             <form action="" class="filter">
                 <h4 class="filter-title">Цвет</h4>
@@ -165,6 +167,15 @@
             display: flex;
             flex-flow: column;
         }
+
+        @media screen and (max-width: 959px){
+            .main {
+                display: flex;
+                flex-flow: column;
+            }
+        }
+        
+        
         .footer-obj {
             display: flex;
             justify-content: center;
@@ -179,6 +190,7 @@
             display: grid;
             justify-content: center;
         }
+
         .header {
             width: 960px;
             height: 60px;
@@ -186,8 +198,23 @@
             align-items: center;
             background-color: rgb(48, 165, 228);
             /* height: 50px; */
-
         }
+
+        @media screen and (max-width: 959px){
+            .helpheader {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 959px){
+            .header {
+                display: flex;
+                align-items: center;
+                width: 768px;
+            }
+        }
+
         .title {
             padding-left: 12px;
             font-size: 24px;
@@ -198,6 +225,16 @@
             margin-top: 12px;
             margin-bottom: 0;
         }
+
+        @media screen and (max-width: 959px){
+            .subtitle {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                padding-left: 0px;
+            }
+        }
+
         .foreword {
             margin-top: 0;
         }
@@ -208,12 +245,28 @@
             grid-template-columns: 240px 1fr;
             flex: 1 1 auto
         }
+
+        @media screen and (max-width: 959px){
+            .container {
+                min-width: 768px;
+                display: flex;
+                
+            }
+        }
+
         .filter {
             padding: 12px;
             width: 240px;
             background-color: rgb(235, 235, 235);
             box-sizing: border-box;
         }
+
+        @media screen and (max-width: 959px){
+            .filter {
+            display: none;   
+            }
+        }
+
         .filter-title {
             font-size: 16px;
             margin-top: 0px;
@@ -234,13 +287,36 @@
             padding-left: 12px;
             box-sizing: border-box;
         }
+
+        @media screen and (max-width: 959px){
+            .content {
+                justify-content: center;
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
         .titleword {
             padding-left: 12px;
         }
+
+        @media screen and (max-width: 959px){
+            .titleword {
+                padding-left: 0;
+            }
+        }
+
         .populars-title {
             padding-left: 12px;
             font-size: 24px;
         }
+
+        @media screen and (max-width: 959px){
+            .populars-title {
+                padding-left: 0;
+            }
+        }
+
         .items-row {
             display: flex;
             flex-direction: row; 
@@ -294,8 +370,21 @@
             min-width: 960px;
             justify-content: center;
             /* height: 50px; */
-
         }
+
+        @media screen and (max-width: 959px){
+            .footer {
+                min-width: 768px;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-height: 550px){
+            .footer {
+                display: none;
+            }
+        }
+
         .footer-content {
             display: flex;
             justify-content: space-between;
