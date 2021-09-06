@@ -43,11 +43,10 @@
 <body class="grid">
     <!-- добавьте вёрстку -->
     <div class="main">
-        <div class="helpheader">
-            <header class="header">
-                <h1 class="title">Магазин игрушек</h1>
-            </header>
-        </div>
+        <header class="header">
+            <h1 class="title">Магазин игрушек</h1>
+        </header>
+       
         <div class="container">   
             <form action="" class="filter">
                 <h4 class="filter-title">Цвет</h4>
@@ -86,7 +85,7 @@
                     <p class="foreword">Все дети любят мягкие игрушки</p>
                 </div>
 
-                <div class="items-row">
+                <div class="items">
                     <div class="item">
                         <a href="">Котики</a>
                         <p class="story">Мяукают и ловят мышей</p>
@@ -99,7 +98,7 @@
                 </div>
 
                 <h3 class="populars-title">Популярные</h3>
-                <div class="items-row">
+                <div class="items items-populars">
                     <div class="item item-with-img">
                         <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
@@ -123,9 +122,8 @@
                             <button>Купить</button>
                         </div>
                     </div>
-                </div>
 
-                <div class="items-row items-row-bottom">
+
                     <div class="item item-with-img">
                         <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
@@ -152,33 +150,26 @@
                 </div>
             </div>
         </div>
-    <div class="footer-obj">
+    
         <footer class="footer">
-            <div class="footer-content">
-                <p>Контакты</p>
-                <p>© 2021 Магазин игрушек</p>
-            </div>
+            <p>Контакты</p>
+            <p>© 2021 Магазин игрушек</p>
         </footer>
-    </div> 
 </div> 
     <style>
         /* добавьте стили */
+        .grid {
+            height: 100vh;
+            width: 100vw;
+        }
+        
         .main {
             display: flex;
+            height: 100%;
+            justify-content: space-between;
             flex-flow: column;
-        }
-
-        @media screen and (max-width: 959px){
-            .main {
-                display: flex;
-                flex-flow: column;
-            }
-        }
-        
-        
-        .footer-obj {
-            display: flex;
-            justify-content: center;
+            align-items: center;
+            padding: 0 12px;
         }
 
         ul {
@@ -186,34 +177,22 @@
             margin: 0;
             padding: 0;
         }
-        .grid {
-            display: grid;
-            justify-content: center;
-        }
 
         .header {
-            width: 960px;
+            width: calc(100% - 24px);
+            position: fixed;
+            top: 0;
+            max-width: 960px;
             height: 60px;
             display: flex;
             align-items: center;
             background-color: rgb(48, 165, 228);
-            /* height: 50px; */
+            left: 50%;
+            transform: translateX(-50%);
         }
-
-        @media screen and (max-width: 959px){
-            .helpheader {
-                display: flex;
-                justify-content: center;
-            }
-        }
-
         @media screen and (max-width: 959px){
             .header {
-                display: flex;
-                align-items: center;
-                width: 744px;
-                margin-left: 12px;
-                margin-right: 12px;
+                max-width: 744px;
             }
         }
 
@@ -222,6 +201,7 @@
             font-size: 24px;
             color: white;
         }
+        
         .subtitle {
             font-size: 32px;
             margin-top: 12px;
@@ -233,7 +213,6 @@
                 display: flex;
                 flex-direction: row;
                 width: 100%;
-                padding-left: 0px;
             }
         }
 
@@ -241,18 +220,19 @@
             margin-top: 0;
         }
         .container {
-            min-width: 960px;
-            padding-top: 12px;
+            padding-top: 72px;
+            width: 100%;
+            max-width: 960px;
             display: grid;
             grid-template-columns: 240px 1fr;
-            flex: 1 1 auto
+            flex: 1 1 auto;
+            grid-gap: 12px;
         }
 
         @media screen and (max-width: 959px){
             .container {
-                min-width: 744px;
+                max-width: 744px;
                 display: flex;
-                
             }
         }
 
@@ -265,7 +245,7 @@
 
         @media screen and (max-width: 959px){
             .filter {
-            display: none;   
+                display: none;   
             }
         }
 
@@ -286,16 +266,12 @@
         }
         .content {
             width: 100%;
-            padding-left: 12px;
             box-sizing: border-box;
         }
 
         @media screen and (max-width: 959px){
             .content {
                 justify-content: center;
-                width: 100%;
-                
-                margin-right: 12px;
 
             }
         }
@@ -306,7 +282,7 @@
 
         @media screen and (max-width: 959px){
             .titleword {
-                padding-left: 0;
+                padding-left: 12px;
             }
         }
 
@@ -317,19 +293,32 @@
 
         @media screen and (max-width: 959px){
             .populars-title {
-                padding-left: 0;
+                padding-left: 12px;
             }
         }
 
-        .items-row {
-            display: flex;
-            flex-direction: row; 
+        .items {
+            display: grid;     
             grid-gap: 12px;
-        }
-        .items-row-bottom {
-            margin-top: 12px;
+            grid-template-columns: repeat(2, 1fr);
         }
 
+        @media screen and (max-width: 516px){
+            .items {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .items-populars {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media screen and (max-width: 959px){
+            .items-populars {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+            }
+        }
+        
         a {
             color: rgb(48, 165, 228);
         }
@@ -346,16 +335,14 @@
             width: 100%;
             background-color: rgb(235, 235, 235);
             padding-left: 12px;
-            padding-top: 12px;   
+            padding-top: 12px;
+            box-sizing: border-box;   
         }
         .item-with-img {
             display: flex;
             flex-direction: row;
         }
-        /* .direkt {
-            display: flex;
-            flex-direction: row;
-        } */
+        
         .item-description {
             display: flex;
             flex-direction: column;
@@ -368,24 +355,20 @@
             background-color: rgb(210, 210, 210);
         }
         .footer {
-            background-color: rgb(235, 235, 235);
-            bottom: 0;
-            position: fixed;
-            min-width: 960px;
-            justify-content: center;
-            /* height: 50px; */
+            background-color: rgb(235, 235, 235);            
+            width: 100%;
+            max-width: 960px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 12px;
+            box-sizing: border-box;
+            margin: 0 12px;
+            margin-top: 12px;
         }
 
         @media screen and (max-width: 959px){
             .footer {
-                min-width: 744px;
-                justify-content: center;
-            }
-        }
-
-        @media screen and (max-height: 550px){
-            .footer {
-                display: none;
+                max-width: 744px;
             }
         }
 
