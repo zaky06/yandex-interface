@@ -40,43 +40,43 @@
     </style>
 </head>
 
-<body class="grid">
+<body>
     <!-- добавьте вёрстку -->
-    <div class="main">
-        <header class="header">
+    <div class="container">
+        <header>
             <h1 class="title">Магазин игрушек</h1>
         </header>
-       
-        <div class="container">   
+        
+        <main>   
             <form action="" class="filter">
                 <h4 class="filter-title">Цвет</h4>
-                    <ul class="filter-items">
-                        <li class="filter-item">
-                            <input type="checkbox">Белый</input>
-                        </li>
-                        <li class="filter-item">
-                            <input type="checkbox">Синий</input>
-                        </li>
-                        <li class="filter-item">
-                            <input type="checkbox">Красный</input>
-                        </li>
-                        <li class="filter-item">
-                            <input type="checkbox">Жетый</input>
-                        </li>
-                    </ul>
+                <ul class="filter-items">
+                    <li class="filter-item">
+                        <input type="checkbox">Белый</input>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox">Синий</input>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox">Красный</input>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox">Жетый</input>
+                    </li>
+                </ul>
 
                 <h4 class="filter-title">Размер</h4>
-                    <ul class="filter-items">
-                        <li class="filter-item">
-                            <input type="checkbox">Большой</input>
-                        </li>
-                        <li class="filter-item">
-                            <input type="checkbox">Маленький</input>
-                        </li>
-                        <li class="filter-item">
-                            <input type="checkbox">Средний</input>
-                        </li>
-                    </ul>
+                <ul class="filter-items">
+                    <li class="filter-item">
+                        <input type="checkbox">Большой</input>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox">Маленький</input>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox">Средний</input>
+                    </li>
+                </ul>
             </form>
 
             <div class="content">
@@ -100,85 +100,70 @@
                 <h3 class="populars-title">Популярные</h3>
                 <div class="items items-populars">
                     <div class="item item-with-img">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
                             <a class="item-link" href="">Федор</a>
-                            <button>Купить</button>
+                            <button class="item-button">Купить</button>
                         </div>
                     </div>
 
                     <div class="item item-with-img">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
                             <a class="item-link" href="">Персик</a>
-                            <button>Купить</button>
+                            <button class="item-button">Купить</button>
                         </div>
                     </div>
 
                     <div class="item item-with-img">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
                             <a class="item-link" href="">Адольф</a>
-                            <button>Купить</button>
+                            <button class="item-button">Купить</button>
                         </div>
                     </div>
 
 
                     <div class="item item-with-img">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
                             <a class="item-link" href="">Барсик</a>
-                            <button>Купить</button>
+                            <button class="item-button">Купить</button>
                         </div>
                     </div>
 
                     <div class="item item-with-img">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
                             <a class="item-link" href="">Пушок</a>
-                            <button>Купить</button>
+                            <button class="item-button">Купить</button>
                         </div>
                     </div>
 
                     <div class="item item-with-img">
-                        <img src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
+                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="">
                         <div class="item-description">
                             <a class="item-link" href="">Дружок</a>
-                            <button>Купить</button>
+                            <button class="item-button">Купить</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <footer class="footer">
-            <p class="foq">Контакты</p>
-            <p class="foq">© 2021 Магазин игрушек</p>
+        </main>
+
+        <footer>
+            <p>Контакты</p>
+            <p>© 2021 Магазин игрушек</p>
         </footer>
 </div> 
     <style>
         /* добавьте стили */
-        .grid {
+        body {
             height: 100vh;
             width: 100vw;
         }
-        
-        .main {
-            display: flex;
-            height: 100%;
-            justify-content: space-between;
-            flex-flow: column;
-            align-items: center;
-            padding: 0 12px;
-        }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
+        header {
             width: calc(100% - 24px);
             position: fixed;
             top: 0;
@@ -190,10 +175,43 @@
             left: 50%;
             transform: translateX(-50%);
         }
+        
         @media screen and (max-width: 959px){
-            .header {
+            header {
                 max-width: 744px;
             }
+        }
+
+        main {
+            padding-top: 72px;
+            width: 100%;
+            max-width: 960px;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            flex: 1 1 auto;
+            grid-gap: 12px;
+        }
+
+        @media screen and (max-width: 959px){
+            main {
+                max-width: 744px;
+                display: flex;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            justify-content: space-between;
+            flex-flow: column;
+            align-items: center;
+            padding: 0 12px;
         }
 
         .title {
@@ -219,22 +237,6 @@
         .foreword {
             margin-top: 0;
         }
-        .container {
-            padding-top: 72px;
-            width: 100%;
-            max-width: 960px;
-            display: grid;
-            grid-template-columns: 240px 1fr;
-            flex: 1 1 auto;
-            grid-gap: 12px;
-        }
-
-        @media screen and (max-width: 959px){
-            .container {
-                max-width: 744px;
-                display: flex;
-            }
-        }
 
         .filter {
             padding: 12px;
@@ -254,16 +256,19 @@
             margin-top: 0px;
             margin: 0;
         }
+
         .filter-items {
             padding-left: 12px;
             display: flex;
             flex-direction: column;
         }
+
         .filter-item {
             display: flex;
             flex-direction: row;
             padding-bottom: 3px;
         }
+
         .content {
             width: 100%;
             box-sizing: border-box;
@@ -310,15 +315,18 @@
         a {
             color: rgb(48, 165, 228);
         }
-        img {
+
+        .item-img {
             width: 60px;
             height: 60px;
             padding-right: 12px;
         }
+
         .story {
             color: rgb(101, 101, 101);
             margin-top: 0;
         }
+
         .item {
             width: 100%;
             background-color: rgb(235, 235, 235);
@@ -326,6 +334,7 @@
             padding-top: 12px;
             box-sizing: border-box;   
         }
+
         .item-with-img {
             display: flex;
             flex-direction: row;
@@ -335,14 +344,17 @@
             display: flex;
             flex-direction: column;
         }
+
         .item-link {
             margin-bottom: 17px;
         }
-        button {
+
+        .item-button {
             margin-bottom: 12px;
             background-color: rgb(210, 210, 210);
         }
-        .footer {
+
+        footer {
             background-color: rgb(235, 235, 235);            
             width: 100%;
             max-width: 960px;
@@ -352,23 +364,13 @@
             box-sizing: border-box;
             margin: 0 12px;
             margin-top: 12px;
+            color: rgb(101, 101, 101);
         }
 
         @media screen and (max-width: 959px){
-            .footer {
+            footer {
                 max-width: 744px;
             }
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 12px;
-            margin-right: 12px;
-            color: rgb(101, 101, 101);
-        }
-        .foq {
-            color: rgb(101, 101, 101);
         }
     </style>
 </body>
