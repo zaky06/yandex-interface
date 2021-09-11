@@ -107,7 +107,7 @@
                 <h3 class="populars-title">Популярные</h3>
                 <div class="items items-populars">
                     <div class="item item-with-img">
-                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="Федор">
+                        <img class="item-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII" alt="Федор">
                         <div class="item-description">
                             <a class="item-link" href="#">Федор</a>
                             <button class="item-button">Купить</button>
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="item item-with-img">
-                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="Персик">
+                        <img class="item-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII" alt="Персик">
                         <div class="item-description">
                             <a class="item-link" href="#">Персик</a>
                             <button class="item-button">Купить</button>
@@ -123,7 +123,7 @@
                     </div>
 
                     <div class="item item-with-img">
-                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="Адольф">
+                        <img class="item-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII" alt="Адольф">
                         <div class="item-description">
                             <a class="item-link" href="#">Адольф</a>
                             <button class="item-button">Купить</button>
@@ -132,7 +132,7 @@
 
 
                     <div class="item item-with-img">
-                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="Барсик">
+                        <img class="item-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII" alt="Барсик">
                         <div class="item-description">
                             <a class="item-link" href="#">Барсик</a>
                             <button class="item-button">Купить</button>
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="item item-with-img">
-                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="Дружок">
+                        <img class="item-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII" alt="Дружок">
                         <div class="item-description">
                             <a class="item-link" href="#">Дружок</a>
                             <button class="item-button">Купить</button>
@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="item item-with-img">
-                        <img class="item-img" src="https://stihi.ru/pics/2012/12/28/5790.jpg" alt="Пушок">
+                        <img class="item-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkMAYAADkANVKH3ScAAAAASUVORK5CYII" alt="Пушок">
                         <div class="item-description">
                             <a class="item-link" href="#">Пушок</a>
                             <button class="item-button">Купить</button>
@@ -165,13 +165,12 @@
 </div>
     <style>
         /* добавьте стили */
-
         body, html {
             height: 100%;
             width: 100%;
             margin: 0;
-            --color-grid: #ccc;
-            --back-color: rgba(180, 0, 180, 0.1);
+            /* --color-grid: #ccc;
+            --back-color: rgba(180, 0, 180, 0.1); */
         }
 
         header {
@@ -182,7 +181,7 @@
             height: 60px;
             display: flex;
             align-items: center;
-            background-color: rgb(48, 165, 228);
+            background-color: var(--color-accent);
             left: 50%;
             transform: translateX(-50%);
         }
@@ -255,7 +254,7 @@
         .filter {
             padding: 12px;
             width: 240px;
-            background-color: rgb(235, 235, 235);
+            background-color: var(--color-background);
             box-sizing: border-box;
         }
 
@@ -290,7 +289,6 @@
         @media screen and (max-width: 959px){
             .content {
                 justify-content: center;
-
             }
         }
 
@@ -299,19 +297,17 @@
         }
 
         .populars-title {
-            margin-top: 26px;
             line-height: 1;
             padding-left: 12px;
             font-size: 24px;
-            margin-top: 30px;
+            margin-top: 29px;
+            margin-bottom: 29px;
         }
 
         .items {
             display: grid;
             grid-gap: 12px;
             grid-template-columns: repeat(2, 1fr);
-
-
         }
 
         @media screen and (max-width: 516px){
@@ -331,7 +327,7 @@
         }
 
         a {
-            color: rgb(48, 165, 228);
+            color: var(--color-accent);
             line-height: 1;
             margin-top: 5px;
         }
@@ -343,7 +339,7 @@
         }
 
         .story {
-            color: rgb(101, 101, 101);
+            color: var(--color-dark-gray);
             margin-top: 0;
             margin-top: 9px;
             line-height: 1;
@@ -351,12 +347,11 @@
 
         .item {
             width: 100%;
-            background-color: rgb(235, 235, 235);
+            background-color: var(--color-background);
             padding-left: 12px;
             padding-top: 12px;
             box-sizing: border-box;
             line-height: 1;
-
         }
 
         .item-with-img {
@@ -371,19 +366,23 @@
 
         .item-link {
             margin-bottom: 17px;
-
         }
 
         .item-button {
-            font-size: 15px;
-            margin-left: 1px;
-            padding-right: 17px;
             margin-bottom: 12px;
-            background-color: rgb(210, 210, 210);
+            border: none;
+            color: black;
+            padding: 3px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: var( --color-light-gray);
         }
 
         footer {
-            background-color: rgb(235, 235, 235);
+            background-color: var(--color-background);
             width: 100%;
             max-width: 960px;
             display: flex;
@@ -391,7 +390,7 @@
             padding: 0 12px;
             box-sizing: border-box;
             margin: 12px 12px 0;
-            color: rgb(101, 101, 101);
+            color: var(--color-dark-gray);
             line-height: 1;
         }
 
