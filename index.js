@@ -36,11 +36,11 @@ solution(input).then((result) => {
   const answer = ["ffffile", "ffiillee", "ffiillee", "fiiile", "filllle"];
   const isEqual = String(answer) === String(result);
 
-  //   if (isEqual) {
-  //     console.log("OK");
-  //   } else {
-  //     console.log("WRONG");
-  //   }
+  if (isEqual) {
+    console.log("OK");
+  } else {
+    console.log("WRONG");
+  }
 });
 
 // Пример рекурсии
@@ -63,36 +63,35 @@ async function solution(input) {
   // ... решение задачи
   let result = [];
 
-  const processingFiles = (file) => {
+  function asyncRead(file, index) {
+    return new Promise((resolve) => {
+      file.read(index, resolve);
+    });
+  }
+
+  function asyncGetSize(file) {
+    return new Promise((resolve) => {
+      file.size(resolve);
+    });
+  }
+
+  const processingFiles = async (file) => {
     if (file !== null && Object.keys(file).length !== 0 && file !== undefined) {
       if (!file.size && file !== "file") {
         result.push(file);
-        return;
       }
 
       if (!!file.size) {
-        file.size((size) => {
-          for (let i = 0; i < size; i++) {
-            file.read(i, (currentFile) => {
-              processingFiles(currentFile);
-            });
-          }
-        });
+        const size = await asyncGetSize(file);
+        for (let i = 0; i < size; i++) {
+          const currentFile = await asyncRead(file, i);
+          await processingFiles(currentFile);
+        }
       }
     }
   };
 
-  processingFiles(input);
+  await processingFiles(input);
 
-  console.log(result);
-  return result;
-
-  // пример вызова read
-
-  // Получить по индексу файл или папку
-  // read(index: number, callback: (file: File) => void): void;
-  //   input.read(1, (file) => console.log(file));
-
-  // пример вызова size
-  //   input.size((size) => console.log(size));
+  return result.sort();
 }
